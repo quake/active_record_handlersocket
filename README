@@ -1,0 +1,24 @@
+## What is this ##
+active_record_handlersocket is an activerecord plugin for HandlerSocket
+
+## What kinds of queries are supported? ###
+Only find by primary key is supported in current version
+
+  * User.find(id)
+  * Project.user #belongs_to
+
+Next step is to supporting foreign key query
+
+## Installation ##
+#### Step 0: Install HandlerSocket ####
+https://github.com/ahiguti/HandlerSocket-Plugin-for-MySQL
+
+#### Step 1: Install ruby-handlersocket ####
+https://github.com/winebarrel/ruby-handlersocket
+
+#### Step 2: Install this plugin ####
+
+#### Step 3: Configure in initializers ####
+Place this in `config/initializers/active_record_handlersocket.rb`
+
+    ActiveRecord::Base.use_handlersocket '127.0.0.1', 9998
